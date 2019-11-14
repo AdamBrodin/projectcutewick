@@ -16,7 +16,6 @@ public class Checkpoints : MonoBehaviour
         if (collision.tag == "Checkpoint")
         {
             spawnpoint = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
-            Debug.Log(spawnpoint);
         }
     }
 }
