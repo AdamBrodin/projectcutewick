@@ -437,7 +437,7 @@ PrefabInstance:
     - target: {fileID: 2688955820328265775, guid: 4650734d945b89b4e80f636764af5127,
         type: 3}
       propertyPath: itemSlots.Array.size
-      value: 16
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2688955820328265775, guid: 4650734d945b89b4e80f636764af5127,
         type: 3}

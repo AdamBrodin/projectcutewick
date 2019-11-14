@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 
 public class Weapon_SemiAuto : BaseWeapon
-{ 
-    void Update()
+{
+    protected override void Update()
     {
+        base.Update();
         if (Input.GetButtonDown("Fire1"))
         {
-                Fire("Weapon_Semi");
+            Fire("Weapon_Semi");
         }
     }
 }

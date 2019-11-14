@@ -14,7 +14,6 @@ TagManager:
   - PickupBox
   - Pickup
   - Checkpoint
-  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -30,7 +29,7 @@ TagManager:
   - Bullet
   - Background
   - Enemy
-  - Weapons
+  - 
   - 
   - 
   - 
