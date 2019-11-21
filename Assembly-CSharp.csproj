@@ -44,8 +44,10 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
-  <ItemGroup>     <Compile Include="Assets\_Scripts_\Camera\Background\Parallax\Rasmus\Parallax.cs" />
+  <ItemGroup>     <Compile Include="Assets\_Scripts_\AchievementSystem.cs" />
+     <Compile Include="Assets\_Scripts_\Camera\Background\Parallax\Rasmus\Parallax.cs" />
      <Compile Include="Assets\_Scripts_\Camera\Rasmus\CameraScript.cs" />
+     <Compile Include="Assets\_Scripts_\CameraShake.cs" />
      <Compile Include="Assets\_Scripts_\Controllers\AudioManager.cs" />
      <Compile Include="Assets\_Scripts_\Controllers\Character\Camera\CameraBehavior.cs" />
      <Compile Include="Assets\_Scripts_\Controllers\Character\Checkpoint\Rasmus\Checkpoints.cs" />
@@ -130,37 +132,37 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/Adam/Documents/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/Adam/Documents/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Adam/Documents/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Adam/Documents/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/Adam/Documents/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/Adam/Documents/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/Adam/Documents/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/Adam/Documents/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>C:/Users/Adam/Documents/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Adam/Documents/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Adam/Documents/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
