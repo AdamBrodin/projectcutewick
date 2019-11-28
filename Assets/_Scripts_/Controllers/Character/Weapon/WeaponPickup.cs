@@ -29,7 +29,6 @@ public class WeaponPickup : MonoBehaviour
             SelectWeapon(1);
         }
 
-
         RaycastHit2D hit = Physics2D.Raycast(rayPoint.position, Vector2.right);
         Debug.DrawRay(rayPoint.position, Vector2.right, Color.magenta);
 
@@ -37,12 +36,14 @@ public class WeaponPickup : MonoBehaviour
         {
             if (hit.transform.CompareTag(weaponTag) && Input.GetKeyDown(pickupKey) && weapons.Count < maxWeapons)
             {
+                AudioManager.Instance.SetState("Weapon_Pickup", true);
                 weapons.Add(hit.collider.gameObject);
 
                 hit.collider.gameObject.SetActive(false);
-                hit.transform.SetParent(holder);
-                hit.transform.transform.localRotation = Quaternion.identity;
-                hit.transform.localPosition = new Vector3(0, 0, 0);
+                hit.transform.SetParent(holder, false);
+                hit.transform.localPosition = Vector3.forward;
+                hit.transform.rotation = Quaternion.LookRotation(hit.transform.forward, transform.up);
+                hit.transform.parent = this.transform;
                 hit.collider.gameObject.GetComponent<BaseWeapon>().enabled = true;
             }
         }
@@ -51,8 +52,10 @@ public class WeaponPickup : MonoBehaviour
         {
             currentWeapon.transform.parent = null;
             currentWeapon.transform.position = dropPoint.position;
+            currentWeapon.gameObject.GetComponent<BaseWeapon>().enabled = false;
 
             var weaponInstanceId = currentWeapon.GetInstanceID();
+
             for (int i = 0; i < weapons.Count; i++)
             {
                 if (weapons[i].GetInstanceID() == weaponInstanceId)

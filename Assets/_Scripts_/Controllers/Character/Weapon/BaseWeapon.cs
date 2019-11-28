@@ -1,6 +1,6 @@
 ﻿#pragma warning disable CS0649
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 
 
@@ -15,7 +15,10 @@ public abstract class BaseWeapon : MonoBehaviour
     public TextMeshProUGUI ammo_Text;
 
     [SerializeField] public int ammo;
-    [SerializeField] protected int internal_Ammo;
+    [SerializeField] private int internal_Ammo;
+
+    [SerializeField] private float lastfailed;
+    [SerializeField] private float failRate;
 
     [SerializeField] private bool accuracy;
     [SerializeField] private bool can_Reload; //under utveckling
@@ -39,7 +42,7 @@ public abstract class BaseWeapon : MonoBehaviour
 
     void FixedUpdate()
     {
-        ammo_Text.text = internal_Ammo.ToString();
+        //ammo_Text.text = internal_Ammo.ToString();
 
         if (internal_Ammo <= 1)
         {
@@ -73,7 +76,6 @@ public abstract class BaseWeapon : MonoBehaviour
                 Rigidbody2D bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
                 bulletInstance.velocity = new Vector2(fireForce, range_Spread);
             }
-
             else
             {
                 // instantiate facing left and set it's velocity to the left.
@@ -84,7 +86,10 @@ public abstract class BaseWeapon : MonoBehaviour
 
         else
         {
-            AudioManager.Instance.SetState("Weapon_Fail", true);
+            if (Time.time - lastfailed > 1 / failRate)
+            {
+                AudioManager.Instance.SetState("Weapon_Fail", true);
+            }
         }
     }
 }

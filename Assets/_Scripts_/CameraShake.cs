@@ -24,7 +24,6 @@ public class CameraShake : MonoBehaviour
     #endregion
     #region Variables
     private Vector3 startPos;
-
     private float strength, duration, decreaseAmount;
     #endregion
     public void ShakeCamera(float strength, float duration, float decreaseAmount)

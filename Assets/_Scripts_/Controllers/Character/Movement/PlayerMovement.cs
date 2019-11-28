@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(float move)
     {
-        //if (isGrounded == true)
+        if (isGrounded == true)
         {
             Vector3 targetVelocity = new Vector2(move * 10f, rb2d.velocity.y);
             rb2d.velocity = Vector3.SmoothDamp(rb2d.velocity, targetVelocity, ref m_Velocity, smoothing);

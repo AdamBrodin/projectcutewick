@@ -676,7 +676,7 @@ GameObject:
   - component: {fileID: 8983152769042548495}
   - component: {fileID: 8983152769042548481}
   - component: {fileID: 8983152769042548480}
-  - component: {fileID: 2688955820328265775}
+  - component: {fileID: 1787908984}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -748,7 +748,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2688955820328265775
+--- !u!114 &1787908984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -757,16 +757,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8983152769042548494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c41de9ae58c8fb4b8d1bacc62f81a54, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c607774e471bc54dabaaf80c8c62b53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nrOfItemSlots: 0
-  itemSlotSize: 0.54
-  itemSlotPrefab: {fileID: 0}
-  itemSlots: []
-  selectedItem: {fileID: 0}
-  selectedItemIndex: 0
-  timeBetweenRapidScroll: 0.05
+  inventoryManager: {fileID: 0}
 --- !u!1 &8983152769050282213
 GameObject:
   m_ObjectHideFlags: 0

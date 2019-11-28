@@ -4,17 +4,33 @@
  * https://github.com/AdamBrodin
  */
 
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Player : Entity
 {
+    #region Singleton
+    private static Player instance;
+    public static Player Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<Player>();
+            }
+            return instance;
+        }
+    }
+    #endregion
     #region Variables
     [SerializeField] private Slider healthSlider;
     [SerializeField] private Color startBlinkColor, endBlinkColor;
     [SerializeField] private float healthBarLerpSpeed, healthBarBlinkTime, healthBarBlinkPauseTime;
     private Image sliderImage;
+    public Action OnPlayerDeath;
     #endregion
 
     protected override void Start()
@@ -34,6 +50,11 @@ public class Player : Entity
     {
         base.OnHitEffect();
         StartCoroutine(HealthbarFlash());
+    }
+
+    protected override void OnDeathEffect()
+    {
+        OnPlayerDeath?.Invoke();
     }
 
     private IEnumerator HealthbarFlash()

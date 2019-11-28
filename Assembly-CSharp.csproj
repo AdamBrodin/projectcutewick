@@ -73,10 +73,14 @@
      <Compile Include="Assets\_Scripts_\Pickup\IPickupable.cs" />
      <Compile Include="Assets\_Scripts_\Pickup\PickupBase.cs" />
      <Compile Include="Assets\_Scripts_\Pickup\Rasmus\Pickup.cs" />
+     <Compile Include="Assets\_Scripts_\Pickup\StatConsumable.cs" />
      <Compile Include="Assets\_Scripts_\Player.cs" />
-     <Compile Include="Assets\Scenes\William\Inventory\ConsumableBase.cs" />
+     <Compile Include="Assets\Scenes\William\ConsumableBase.cs" />
+     <Compile Include="Assets\Scenes\William\Inventory\InventoryDisplayer.cs" />
      <Compile Include="Assets\Scenes\William\Inventory\InventoryManager.cs" />
-     <Compile Include="Assets\Scenes\William\Inventory\ThrowableBase.cs" />
+     <Compile Include="Assets\Scenes\William\Inventory\ItemSelector.cs" />
+     <Compile Include="Assets\Scenes\William\Inventory\Mve.cs" />
+     <Compile Include="Assets\Scenes\William\ThrowableBase.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

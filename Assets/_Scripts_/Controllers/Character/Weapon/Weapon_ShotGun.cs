@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class Weapon_ShotGun : BaseWeapon
 {
-    [SerializeField] private float lastfired;
+    [SerializeField] private float lastfired, cameraShakeAmount, cameraShakeDuration, cameraShakeDecrease;
     [SerializeField] private float FireRate = 10;
-
-    [SerializeField] private float shakeStrength, shakeDuration, shakeDecrease;
 
     void Update()
     {
@@ -19,9 +17,7 @@ public class Weapon_ShotGun : BaseWeapon
                 Fire("Weapon_Shotgun");
                 Fire("Weapon_Shotgun");
                 Fire("Weapon_Shotgun");
-
-
-                if (internal_Ammo > 0) CameraShake.Instance.ShakeCamera(shakeStrength, shakeDuration, shakeDecrease);
+                CameraShake.Instance.ShakeCamera(cameraShakeAmount, cameraShakeDuration, cameraShakeDecrease);
             }
         }
     }

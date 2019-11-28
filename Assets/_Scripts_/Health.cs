@@ -16,6 +16,7 @@ public abstract class Health : MonoBehaviour, IKillable
 
     public void ChangeHealth(int value)
     {
+        // StartHealth is the maximum amount of health possible
         if (CurrentHealth + value <= StartHealth)
         {
             CurrentHealth += value;
