@@ -37,10 +37,10 @@ public class PlayerMovement : MonoBehaviour
     {
         Move(playerAxis);
 
-        if (BaseWeapon.is_Firing == true)
+        /*if (BaseWeapon.is_Firing == true)
         {
              rb2d.velocity *= -1;
-        }
+        }*/
 
          isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.15f, groundLayer);
 

@@ -31,6 +31,9 @@ public class Player : Entity
     [SerializeField] private float healthBarLerpSpeed, healthBarBlinkTime, healthBarBlinkPauseTime;
     private Image sliderImage;
     public Action OnPlayerDeath;
+
+    [SerializeField] private InventoryManager inventoryManager;
+
     #endregion
 
     protected override void Start()
@@ -95,7 +98,8 @@ public class Player : Entity
     {
         if (col.gameObject.tag == "Pickup")
         {
-            col.gameObject?.GetComponent<PickupBase>().Pickup();
+            inventoryManager.AddItem(col.gameObject);
+            col.gameObject.SetActive(false);
         }
     }
 

@@ -10,7 +10,7 @@ public class InventoryDisplayer : MonoBehaviour
 
     private Image[] itemSlotImages;
 
-    private void Awake()
+    private void Start()
     {
         itemSlotImages = new Image[inventoryManager.itemSlots.Count];
 
@@ -18,7 +18,7 @@ public class InventoryDisplayer : MonoBehaviour
             itemSlotImages[i] = inventoryManager.itemSlots[i].transform.GetChild(0).GetChild(0).GetComponent<Image>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
         inventoryManager.ItemAddEvent += AddItemSprite;
         inventoryManager.ItemRemoveEvent += DisableItemSprite;

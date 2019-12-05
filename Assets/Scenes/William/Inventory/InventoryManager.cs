@@ -51,7 +51,18 @@ public class InventoryManager : MonoBehaviour
                 break;
             }
         }
+    }
 
+    public void UseItem(int index)
+    {
+        if (Items[index]?.GetComponent<ConsumableBase>().usesRemaining >= 1)
+        {
+            Items[index]?.GetComponent<IConsumable>().Use();
+        }
+        else
+        {
+            RemoveItem(index);
+        }
     }
 
     /// <summary>

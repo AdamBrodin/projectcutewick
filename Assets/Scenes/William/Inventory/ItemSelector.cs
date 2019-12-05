@@ -33,9 +33,7 @@ public class ItemSelector : MonoBehaviour
     private float scrollInput = 0;
     private bool firstLoop = true;
 
-
-
-    private void Awake()
+    private void Start()
     {
         itemSlotBorders = new Image[inventoryManager.itemSlots.Count];
         for (int i = 0; i < inventoryManager.itemSlots.Count; i++)
@@ -64,6 +62,11 @@ public class ItemSelector : MonoBehaviour
         {
             if (Input.GetKeyDown(keyCodes[i]))
                 selectedItemIndex = i;
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            inventoryManager.UseItem(selectedItemIndex);
         }
     }
 

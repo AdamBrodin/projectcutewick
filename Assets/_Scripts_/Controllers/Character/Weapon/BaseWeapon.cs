@@ -2,8 +2,6 @@
 using TMPro;
 using UnityEngine;
 
-
-
 public abstract class BaseWeapon : MonoBehaviour
 {
     #region BaseVariables
@@ -14,7 +12,7 @@ public abstract class BaseWeapon : MonoBehaviour
 
     public TextMeshProUGUI ammo_Text;
 
-    [SerializeField] public int ammo;
+    [SerializeField] public static int ammo;
     [SerializeField] private int internal_Ammo;
 
     [SerializeField] private float lastfailed;
@@ -38,21 +36,12 @@ public abstract class BaseWeapon : MonoBehaviour
     void Awake()
     {
         playerCtrl = GameObject.Find("Player").GetComponent<PlayerMovement>();
-    }
+    }   
 
     void FixedUpdate()
     {
-        //ammo_Text.text = internal_Ammo.ToString();
-
-        if (internal_Ammo <= 1)
-        {
-            internal_Ammo = 0;
-        }
-
-        if (internal_Ammo >= 50)
-        {
-            internal_Ammo = 50;
-        }
+        internal_Ammo = Mathf.Clamp(internal_Ammo, 0, 60);
+        ammo_Text.text = internal_Ammo.ToString();
     }
 
     public void Fire(string sound)
@@ -72,14 +61,14 @@ public abstract class BaseWeapon : MonoBehaviour
 
             if (playerCtrl.facingRight == 1)
             {
-                // instantiate facing right and set it's velocity to the right.
+
                 Rigidbody2D bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
                 bulletInstance.velocity = new Vector2(fireForce, range_Spread);
             }
+
             else
             {
-                // instantiate facing left and set it's velocity to the left.
-                Rigidbody2D bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 180f))) as Rigidbody2D;
+                Rigidbody2D bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 180))) as Rigidbody2D;
                 bulletInstance.velocity = new Vector2(-fireForce, range_Spread);
             }
         }
