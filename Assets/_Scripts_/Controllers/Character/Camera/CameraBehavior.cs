@@ -20,22 +20,25 @@ public class CameraBehavior : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector3 wantedPosition;
-
-        if (followBehind)
-            wantedPosition = target.TransformPoint(0, camerHeight, -cameraDistance);
-        else
-            wantedPosition = target.TransformPoint(0, camerHeight, cameraDistance);
-
-        transform.position = Vector3.Lerp(transform.position, wantedPosition, Time.deltaTime * damping);
-
-        if (smoothRotation)
+        if (target != null)
         {
-            Quaternion wantedRotation = Quaternion.LookRotation(target.position - transform.position, target.up);
-            transform.rotation = Quaternion.Slerp(transform.rotation, wantedRotation, Time.deltaTime * rotationDamping);
-        }
+            Vector3 wantedPosition;
 
-        else transform.LookAt(target, target.up);
+            if (followBehind)
+                wantedPosition = target.TransformPoint(0, camerHeight, -cameraDistance);
+            else
+                wantedPosition = target.TransformPoint(0, camerHeight, cameraDistance);
+
+            transform.position = Vector3.Lerp(transform.position, wantedPosition, Time.deltaTime * damping);
+
+            if (smoothRotation)
+            {
+                Quaternion wantedRotation = Quaternion.LookRotation(target.position - transform.position, target.up);
+                transform.rotation = Quaternion.Slerp(transform.rotation, wantedRotation, Time.deltaTime * rotationDamping);
+            }
+
+            else transform.LookAt(target, target.up);
+        }
     }
 
 }

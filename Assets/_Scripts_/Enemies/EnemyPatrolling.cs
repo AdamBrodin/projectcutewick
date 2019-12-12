@@ -77,34 +77,23 @@ public class EnemyPatrolling : EnemyFollowing
         {
             transform.localScale = new Vector2(startScale.x, transform.localScale.y);
         }
-
-        /*
-                bool turnRight = direction > 0;
-        float newScale = 0;
-        if (turnRight)
-        {
-            newScale = startScale.x;
-        }
-        else
-        {
-            newScale = startScale.x * -1;
-        }
-        transform.localScale = new Vector2(newScale, startScale.y);
-        */
     }
 
     private void StateUpdate()
     {
-        float distanceToPlayer = Vector2.Distance(gameObject.transform.position, playerTransform.position);
-        if (distanceToPlayer <= followProximity)
+        if (playerObject != null)
         {
-            if (distanceToPlayer <= attackProximity)
+            float distanceToPlayer = Vector2.Distance(gameObject.transform.position, playerObject.transform.position);
+            if (distanceToPlayer <= followProximity)
             {
-                currentState = EnemyState.Attacking;
-            }
-            else
-            {
-                currentState = EnemyState.Following;
+                if (distanceToPlayer <= attackProximity)
+                {
+                    currentState = EnemyState.Attacking;
+                }
+                else
+                {
+                    currentState = EnemyState.Following;
+                }
             }
         }
         else if (currentState != EnemyState.Idle)

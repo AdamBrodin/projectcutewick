@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Checkpoints : MonoBehaviour
 {
-    private Vector3 spawnpoint;
+    public static Vector3 spawnpoint;
 
     void Start()
     {
@@ -17,5 +17,9 @@ public class Checkpoints : MonoBehaviour
         {
             spawnpoint = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
         }
+    }
+    void Respawn()
+    {
+        transform.position = spawnpoint;
     }
 }

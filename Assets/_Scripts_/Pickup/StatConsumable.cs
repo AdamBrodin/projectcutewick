@@ -18,7 +18,6 @@ public class StatConsumable : ConsumableBase
     private void Start()
     {
         inventoryManager = GameObject.Find("Player").GetComponent<InventoryManager>();
-
         usesRemaining = maxUses;
     }
 
@@ -30,5 +29,6 @@ public class StatConsumable : ConsumableBase
 
     public override void OnEmpty()
     {
+
     }
 }

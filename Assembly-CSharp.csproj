@@ -45,6 +45,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>     <Compile Include="Assets\_Scripts_\AchievementSystem.cs" />
+     <Compile Include="Assets\_Scripts_\ButtonManager.cs" />
      <Compile Include="Assets\_Scripts_\Camera\Background\Parallax\Rasmus\Parallax.cs" />
      <Compile Include="Assets\_Scripts_\Camera\Rasmus\CameraScript.cs" />
      <Compile Include="Assets\_Scripts_\CameraShake.cs" />
@@ -61,7 +62,6 @@
      <Compile Include="Assets\_Scripts_\Controllers\Character\Weapon\Weapon_ShotGun.cs" />
      <Compile Include="Assets\_Scripts_\Controllers\Character\Weapon\WeaponPickup.cs" />
      <Compile Include="Assets\_Scripts_\Enemies\Enemy.cs" />
-     <Compile Include="Assets\_Scripts_\Enemies\EnemyCharging.cs" />
      <Compile Include="Assets\_Scripts_\Enemies\EnemyFollowing.cs" />
      <Compile Include="Assets\_Scripts_\Enemies\EnemyMovement.cs" />
      <Compile Include="Assets\_Scripts_\Enemies\EnemyPatrolling.cs" />
@@ -170,6 +170,12 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Postprocessing.Editor">
+ <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Postprocessing.Runtime">
+ <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
