@@ -29,6 +29,7 @@ public abstract class BaseWeapon : MonoBehaviour
     public bool full_Auto = false;
     public bool shotgun = false;
     public bool range = false;
+    public float spawnChance;
     #endregion
 
     private PlayerMovement playerCtrl;
@@ -36,7 +37,8 @@ public abstract class BaseWeapon : MonoBehaviour
     void Awake()
     {
         playerCtrl = GameObject.Find("Player").GetComponent<PlayerMovement>();
-    }   
+        ammo_Text = GameObject.Find("Ammo Text").GetComponent<TextMeshProUGUI>();
+    }
 
     void FixedUpdate()
     {

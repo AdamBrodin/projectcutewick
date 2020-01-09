@@ -24,7 +24,7 @@ public class EnemyFollowing : Enemy
     protected override void Move() => FollowPlayer();
     protected void FollowPlayer()
     {
-        rgbd2d.position = Vector2.MoveTowards(gameObject.transform.position, playerObject.transform.position, moveSpeed * Time.deltaTime);
+        if (playerObject != null) rgbd2d.position = Vector2.MoveTowards(gameObject.transform.position, playerObject.transform.position, moveSpeed * Time.deltaTime);
     }
 
     protected override void AttackPlayer()

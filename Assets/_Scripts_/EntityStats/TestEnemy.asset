@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0f992f52491c2e488c297a6fb43f98f, type: 3}
   m_Name: TestEnemy
   m_EditorClassIdentifier: 
-  startHealth: 5
+  startHealth: 4
   damageValue: 1
-  moveSpeed: 5
+  moveSpeed: 3

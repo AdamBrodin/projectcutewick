@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponPickup : MonoBehaviour
 {
@@ -16,6 +17,13 @@ public class WeaponPickup : MonoBehaviour
     public Transform holder;
     public Transform rayPoint;
     public Transform dropPoint;
+
+    private Image secondaryWeaponImage;
+
+    private void Awake()
+    {
+        secondaryWeaponImage = GameObject.Find("ImgHolder").GetComponentInChildren<Image>();
+    }
 
     void Update()
     {
@@ -45,6 +53,11 @@ public class WeaponPickup : MonoBehaviour
                 hit.transform.rotation = Quaternion.LookRotation(hit.transform.forward, transform.up);
                 hit.transform.parent = this.transform;
                 hit.collider.gameObject.GetComponent<BaseWeapon>().enabled = true;
+
+                if (weapons.Count > 1)
+                {
+
+                }
             }
         }
 
@@ -79,6 +92,19 @@ public class WeaponPickup : MonoBehaviour
             }
             currentWeapon = weapons[index];
             currentWeapon.SetActive(true);
+
+            if (weapons.Count > 1)
+            {
+                if (index == 0)
+                {
+                    secondaryWeaponImage.sprite = weapons[1].GetComponent<SpriteRenderer>().sprite;
+                }
+                else
+                {
+                    secondaryWeaponImage.sprite = weapons[0].GetComponent<SpriteRenderer>().sprite;
+                }
+            }
+
         }
     }
 }

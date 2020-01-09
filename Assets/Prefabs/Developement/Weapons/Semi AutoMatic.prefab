@@ -27,7 +27,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3110408694832084761}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.03}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.9412649, y: 3.1929762, z: 3.1929762}
   m_Children: []
   m_Father: {fileID: 0}
@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.79, y: 1.07}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3110408694832084762
@@ -54,14 +54,16 @@ MonoBehaviour:
   fireForce: 50
   range_Spread: 0
   ammo_Text: {fileID: 0}
-  ammo: 30
   internal_Ammo: 30
+  lastfailed: 0
+  failRate: 0
   accuracy: 0
   can_Reload: 0
   semi_Auto: 1
   full_Auto: 0
   shotgun: 0
   range: 0
+  spawnChance: 100
 --- !u!222 &2235953098113205529
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -37,11 +37,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Move(playerAxis);
 
-        /*if (BaseWeapon.is_Firing == true)
-        {
-             rb2d.velocity *= -1;
-        }*/
-
          isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.15f, groundLayer);
 
         if (Input.GetButtonDown("Jump") && isGrounded == true)
@@ -52,23 +47,20 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(float move)
     {
-        if (isGrounded == true)
+        Vector3 targetVelocity = new Vector2(move * 10f, rb2d.velocity.y);
+        rb2d.velocity = Vector3.SmoothDamp(rb2d.velocity, targetVelocity, ref m_Velocity, smoothing);
+
+        if (move > 0 && !playerDir)
         {
-            Vector3 targetVelocity = new Vector2(move * 10f, rb2d.velocity.y);
-            rb2d.velocity = Vector3.SmoothDamp(rb2d.velocity, targetVelocity, ref m_Velocity, smoothing);
+            Flip();
+            facingRight = 1;
+        }
 
-            if (move > 0 && !playerDir)
-            {
-                Flip();
-                facingRight = 1;
-            }
+        else if (move < 0 && playerDir)
+        {
+            Flip();
 
-            else if (move < 0 && playerDir)
-            {
-                Flip();
-
-                facingRight = 0;
-            }
+            facingRight = 0;
         }
     }
 

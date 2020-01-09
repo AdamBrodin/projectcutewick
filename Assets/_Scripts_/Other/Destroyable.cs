@@ -8,15 +8,15 @@ public class Destroyable : MonoBehaviour
     public int hit_damage;
     public float obj_Mass;
 
-    void Update()
+    private void Update()
     {
         if (durability < 1)
         {
-            Destroy(gameObject);
+            DestroySelf();
         }
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Bullet_Basic")
         {
@@ -24,8 +24,10 @@ public class Destroyable : MonoBehaviour
         }
     }
 
+    protected virtual void DestroySelf() { }
+
     public void Take_Damage(int dmg)
     {
         durability -= dmg;
-    } 
+    }
 }

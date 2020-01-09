@@ -73,6 +73,7 @@
      <Compile Include="Assets\_Scripts_\IKillable.cs" />
      <Compile Include="Assets\_Scripts_\Other\CrateBehavior.cs" />
      <Compile Include="Assets\_Scripts_\Other\Destroyable.cs" />
+     <Compile Include="Assets\_Scripts_\Other\ObjectGlow.cs" />
      <Compile Include="Assets\_Scripts_\Pickup\HealthPickup.cs" />
      <Compile Include="Assets\_Scripts_\Pickup\IPickupable.cs" />
      <Compile Include="Assets\_Scripts_\Pickup\PickupBase.cs" />
@@ -83,6 +84,7 @@
      <Compile Include="Assets\Scenes\William\Inventory\InventoryDisplayer.cs" />
      <Compile Include="Assets\Scenes\William\Inventory\InventoryManager.cs" />
      <Compile Include="Assets\Scenes\William\Inventory\ItemSelector.cs" />
+     <Compile Include="Assets\Scenes\William\Radiation\RadiationManager.cs" />
      <Compile Include="Assets\Scenes\William\ThrowableBase.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -121,6 +123,7 @@
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\Graphics\Shaders\SpriteGlow.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
@@ -156,11 +159,17 @@
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Postprocessing.Editor">
+ <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
  <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Postprocessing.Runtime">
+ <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
  <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
@@ -170,12 +179,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Postprocessing.Editor">
- <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Postprocessing.Runtime">
- <HintPath>C:/Users/Adam/Documents/Development Workspace/Unity Projects/Project Cute Wick/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

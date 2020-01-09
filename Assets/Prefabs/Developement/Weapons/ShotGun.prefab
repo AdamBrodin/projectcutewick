@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8303000063224722056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.9, y: 0.7, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -47,11 +47,18 @@ MonoBehaviour:
   fireForce: 20
   range_Spread: 1
   ammo_Text: {fileID: 0}
-  ammo: 100
   internal_Ammo: 100
+  lastfailed: 0
+  failRate: 0
   accuracy: 0
   can_Reload: 0
   semi_Auto: 0
   full_Auto: 0
   shotgun: 1
   range: 0
+  spawnChance: 100
+  lastfired: 0
+  cameraShakeAmount: 0
+  cameraShakeDuration: 0
+  cameraShakeDecrease: 0
+  FireRate: 10
